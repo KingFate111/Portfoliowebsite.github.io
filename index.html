@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Fate  </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/380f813e32.js" crossorigin="anonymous"></script>
+  <style>
+ /* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(207, 65, 65);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+  
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+       <a href="index.html"> <img  src="image/_Dominator7-removebg-preview.png " class="logo" alt="Logo" ></a>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Myblog.html" target="_blank">My blog</a></li>
+          <li><a href="Product.html" target="_blank">Products</a></li>
+          
+          
+          
+          <li><a href="Memoeries.html" target="_blank">Memories</a></li>
+          <i class="fa-solid fa-xmark" id="iconz" onclick="closemenu()"></i>
+          </ul>
+                    <i class="fa-solid fa-bars" id="iconz" onclick="openmenu()"></i>
+
+      </nav>
+      <div class="headertext">
+       
+          <h1>Ram Ram !  <br>I'm
+            <span>Fatebahadur Nandwanshi</span> <br>From Maharashtra  </h1>
+
+
+            <!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+            <script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'NISM Certified Reserach Analyst ',
+						'Advanced Data Analyst ',
+						'YouTuber  ',
+						'Finance Trader   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+             <!-- <p>
+          Data Analyst | Web Developer | Software Engineer</p> -->
+            
+        
+      </div>
+    </div>
+  </div>
+  <!-- -----about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1"> <img src="image/me.png" alt=""> </div>
+          
+        
+        <div class="about-col-2">
+          <h1    >About Me </h1>
+          <p> I completed my Bachelor's degree in Computer Science and Engineering with a strong CGPA of 8.6, gaining a solid foundation in logic, problem-solving, and analytical thinking.
+
+Backed by hands-on experience as a data analyst,<br> I have practical skills in tools like Excel, SQL, Power BI, and Python—making data tell meaningful stories. <br>
+
+I’m also a NISM-certified Research Analyst with deep expertise in the Indian stock market, forex, crypto, and IPOs.  <br>
+
+Combining this with my technical background and financial passion, I bring a unique edge:
+I analyze markets with the precision of a data analyst and the mindset of a trader.
+
+Confident, disciplined, and driven.<br>
+I don’t just study data or markets.  <br>
+I live them.
+
+          </p>
+          <div class="tab-titles">
+            <p  class="tab-links active-link" onclick="opentab('skills')">Skills </p>
+            
+            <p  class="tab-links"onclick="opentab('Experience')">Experience</p>
+            <p  class="tab-links"onclick="opentab('Education')">Education</p>
+       
+
+        </div>
+        <div class="tab-contents active-tab " id="skills">
+          <ul>
+            <li>  <span>End to end Data Modeling </span> <br> From start to end Data Extraction Data Cleaning Data Modeling  </li>
+            <li>  <span>Excel | PostgreSQl | Power Bi | Python </span> <br> Detail Data Visuliztion ,Deep insight with the help Of KPIs  </li>
+            <li>  <span>Web Devlopment</span> <br> Live and practical example is this webstite i made with own from scratch</li>
+          </ul>
+        </div>
+        <div class="tab-contents"id="Experience">
+          <ul>
+            <li>  <span>2024(Sep)-(March)2025 </span> <br> Jr.Data Analyst at Robotics India Pvt.Ltd  </li>
+            <li>  <span>2024(June)-(Aug)</span> <br> Virtual Internship at Excelr </li>
+            <li>  <span>2023</span> <br> Final Semester Project</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Education">
+          <ul>
+            <li>  <span>2020-24</span> <br> Bachelor in Computer Science and Engineering (8.6 C.G.P.A)  </li>
+            <li>  <span>2018-2020</span> <br> Jr College of General Science </li>
+            <li>  <span>2017-2018</span> <br> Completed SSC at National Military School,Akola (Gaigaon)</li>
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+  <!-- -----Services -->
+   <div id="services">
+   <div class="container">
+    <h1 class="sub-title"> My services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Website Development</h2>
+        <p>I'm a website developer specializing in creating modern ecommerce, portfolio, personal brand, and online shop websites that are fast, responsive, and visually engaging.
+</p>
+        <a href="#"  > Learn more </a>
+      </div>
+      <div>
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        <h2>Data Analysis </h2>
+        <p>I'm an experienced data analyst skilled in extracting, cleaning, and visualizing data to uncover valuable business insights that drive smarter decisions.
+</p>
+        <a href="#"  > Learn more </a>
+      </div>
+      <div>
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <h2>Research Analyst</h2>
+        <p>I'm a NISM-certified Research Analyst with hands-on experience in managing personal finance. I offer practical and honest guidance on mutual funds, fixed deposits, and smart strategies to make your money work effectively.
+</p>
+        <a href="#"  > Learn more </a>
+      </div>
+    </div>
+
+   </div>
+   </div>
+   <!-- ---------------------POrtfolio--------------- -->
+    <div id="portfolio">
+    <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="worklist">
+      <div class="work">
+        <img src="image/proj_1.jpg" alt="">
+        <div class="layer">
+          <h3>Music Store Analysis using SQL (PostgreSQL)</h3>
+          <p>This project involves data analysis on a fictional music store database using PostgreSQL. I used complex SQL queries to extract insights on customer behavior, sales performance, top-selling tracks, genre popularity, and regional trends. The project demonstrates skills in data cleaning, joins, subqueries, aggregation, window functions, and performance optimization in SQL. It helps stakeholders make informed decisions for marketing, inventory, and customer targeting strategies.  </p>
+          <a href="https://github.com/KingFate111/Music-Store-Analysis-SQL-" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="image/proj_2.jpg" alt="">
+         <div class="layer">
+          <h3>
+Monsoon-Sales-Analysis-Python-
+ </h3>
+          <p>This project focuses on analyzing retail sales data during the monsoon season using Python. Leveraging libraries like Pandas, NumPy, Matplotlib, and Seaborn, I performed data cleaning, exploratory data analysis (EDA), and visualizations to identify sales patterns, seasonal demand shifts, and top-performing products. The analysis provides actionable insights for inventory planning, marketing strategies, and revenue optimization during the monsoon period.  </p>
+          <a href="https://github.com/KingFate111/Monsoon-Sales-Analysis-Python-" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="image/proj_4.jpg" alt="">
+         <div class="layer">
+          <h3>Excel Modeling and Power Bi Visualization</h3>
+          <p> In this project, I developed a dynamic financial and sales model using Microsoft Excel, incorporating formulas, pivot tables, charts, and data validation for effective decision-making. The cleaned and structured data was then imported into Power BI to create interactive dashboards and reports. These visualizations showcased key metrics such as revenue trends, regional sales performance, and product-wise profitability—enabling data-driven business insights and stakeholder communication.  </p>
+          <a href="https://github.com/KingFate111" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+<a href="https://github.com/KingFate111" target="_blank" class="btn">See More </a>
+    
+    </div>
+    </div>
+    
+    <!-- ---------------contact---------------- -->
+     <div id="contact">
+      <div class="container
+      ">
+        <div class="row">
+          <div class="contactleft">
+            <h1 class="sub-titlecontact " > Contact Me </h1>
+            <p> <i class="fa-solid fa-paper-plane"></i>fatebahadurnandwanshi@gmail.com
+</p>
+            <p> <i class="fa-solid fa-phone"></i>+91-9666112245</p>
+            <div class="social-icons">
+             <a href="https://www.youtube.com/channel/UC9JnWULRwdAMYf4Gz9mtVZg" target="_blank"> <i class="fa-brands fa-youtube"></i></a>
+             <a href="https://x.com/PradumnyaN" target="_blank"> <i class="fa-brands fa-x-twitter"></i></a>
+             <a href="https://github.com/KingFate111"  target="_blank"> <i class="fa-brands fa-square-github"></i></a>
+             <a href="https://www.instagram.com/_pradumnya_/"  target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.linkedin.com/in/fatebahadur-nandwanshi-96b3b62ab/"  target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <a href="image/Data Analyst Resume-1.pdf" download class="btn btn2">Download CV </a>
+          </div>
+          <div class="contactright">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email"  name="Email" placeholder="Your Email" required>
+              <!-- <textarea name="Message" rows="6"  placeholder ="Feedback or any Suggestion" > </textarea> -->
+               <textarea name="Message" rows="6" placeholder="Feedback or any Suggestion..."></textarea> 
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>   
+        </div>
+        <div class="copyright">
+          <p>Copyright 2003-2025 by Pradumnya. All Rights Reserved.<i class="fa-solid fa-shield-heart"></i> From KingFate </p>
+        </div>
+    </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      
+    }
+   
+  </script>
+   <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+   </script>
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwzSJ2iGz1B_2DHBJD1qCUS4ojp8vEq5xbnIR8o0_puK0SIGfd1D15y6gKJOrmISLVv/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>      
