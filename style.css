@@ -15,14 +15,25 @@ body{
     
 }
 #header{
-    width: 100%;
+ 
+    /* width: 100%;
     height: 100vh;
-    background-image: url(IMG_3282.JPG);
+    background-image: url(image/ai\ png.png);
     background-size: cover;
-    background-position: center;
+    background-position: right; */
     /* position: fixed;
    z-index: 1000; */
+   
+
+      width: 100%;
+    height: 100vh;
+    background-image: url('image/ai png.png');
+    background-repeat: no-repeat;
+    background-position: right center; /* image aligns to the right */
+    background-size: contain; /* image scales properly */
+    background-color: #000; /* optional: fallback color or styling */
 }
+
 .container{
    padding: 10px 3%;
 }
@@ -68,7 +79,7 @@ nav ul li a{
     
 } */
 nav ul li a:hover{
-    color: #ff004f;
+    color: #d9ff00;
     
 }
 .headertext{
@@ -79,10 +90,10 @@ nav ul li a:hover{
 .headertext h1{
     font-size: 60px;
    margin-top: 20px;
-   color: rgb(1, 0, 0);
+   color: rgb(225, 223, 100);
 }
 .headertext h1 span{
-    color: #761e1e;
+    color: #f3f1f1;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 .headertext p{
@@ -121,10 +132,15 @@ nav ul li a:hover{
     flex-basis: 80%;
 }
 .about-col-2 h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     
 }
-
+.about-col-2 p{
+    font-size: 17px;
+    font-weight: 550;
+   
+}
 
 .sub-title {
     text-align: center;
