@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>B.J. Nandwanshi Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slide { display: none; }
+    .active-slide { display: block; }
+    .div img {
+        height: 100%;
+        width: 100%;
+
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-yellow-50 to-green-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="text-center py-10 bg-white shadow">
+    <h1 class="text-4xl font-bold text-green-700">B.J. Nandwanshi Foundation</h1>
+    <p class="text-md mt-2 text-gray-600">Serving cows 🐄, dogs 🐕 & dharma 🙏 — One act of kindness at a time</p>
+  </header>
+
+  <!-- Image Slider -->
+  <section class="max-w-4xl mx-auto my-10">
+    <div class="relative h-64 rounded-lg overflow-hidden shadow-lg">
+      <img class="slide active-slide w-full h-full object-cover" src="Foundation/kali mata nandini.jpg" alt="Cow Image">
+      <img class="slide w-full h-full object-cover" src="Foundation/IMG20221023104835.jpg" alt="Dog Image">
+      <img class="slide w-full h-full object-cover" src="Foundation/IMG20230214112225.jpg" alt="Seva Image">
+    </div>
+  </section>
+
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove("active-slide");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active-slide");
+    }, 3000);
+  </script>
+
+  <!-- Donation Callout -->
+  <section class="text-center py-12 bg-white">
+    <h2 class="text-2xl font-bold text-yellow-700 mb-4">Support the Cause 🧡</h2>
+    <p class="max-w-2xl mx-auto text-gray-700">
+      With limited resources, we care for stray cows, dogs, and abandoned animals.  
+      Help us through donation, volunteering, or just spreading awareness.
+    </p>
+  </section>
+
+  <!-- Organization Cards -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Our 5 </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-5 rounded shadow-md">
+        <h3 class="text-lg font-bold text-yellow-600">Gaushala No. 1</h3>
+        <p class="text-gray-600">Home to 12 cows including rescued bulls and calves.</p>
+      </div>
+      <div class="bg-white p-5 rounded shadow-md">
+        <h3 class="text-lg font-bold text-yellow-600">Street Dog Care</h3>
+        <p class="text-gray-600">Feeding & first-aid for 50+ dogs in Amravati district.</p>
+      </div>
+      <div class="bg-white p-5 rounded shadow-md">
+        <h3 class="text-lg font-bold text-yellow-600">Volunteer Point</h3>
+        <p class="text-gray-600">Local youths come together to clean and serve weekly.</p>
+      </div>
+      <div class="bg-white p-5 rounded shadow-md">
+        <h3 class="text-lg font-bold text-yellow-600">Adoption Help Desk</h3>
+        <p class="text-gray-600">We guide people to adopt, not shop — especially Indian breeds.</p>
+      </div>
+      <div class="bg-white p-5 rounded shadow-md">
+        <h3 class="text-lg font-bold text-yellow-600">Daily Seva Kitchen</h3>
+        <p class="text-gray-600">Cooked food, roti-dal, and leftovers managed for animal feed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-green-800 text-white text-sm">
+    © 2025 B.J. Nandwanshi Foundation. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

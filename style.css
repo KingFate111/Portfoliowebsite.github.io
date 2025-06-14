@@ -88,15 +88,17 @@ nav ul li a:hover{
 
 }
 .headertext h1{
+      font-size: clamp(2rem, 5vw, 4rem);
     font-size: 60px;
    margin-top: 20px;
    color: rgb(225, 223, 100);
 }
 .headertext h1 span{
-    color: #f3f1f1;
+    color: #55c3ec;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 .headertext p{
+     font-size: clamp(1rem, 3vw, 1.5rem);
     font-size: 30px;
     margin-top: 15px;
     color: #1a3c1b;
@@ -403,16 +405,37 @@ form .btn2 {
 nav #iconz{
     display: none;
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 900px) {
+  .about-col-1 { flex: 30%; }
+  .about-col-2 { flex: 65%; }
+}
+
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(image/IMG_3282\ blur.JPG
+        background-image: url(image/ai\ png.png
         
         );
     }
     nav .logo{
     display: none;
 }
+
     .headertext{
         margin-top: 80%;
         font-size: 14px;
